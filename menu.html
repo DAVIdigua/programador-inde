@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Principal</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0a1a3a, #09265b);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #00bfff;
+    }
+
+    .info {
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .info h2 {
+      color: #00bfff;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 8px 0;
+    }
+
+    .social {
+      margin-top: 20px;
+    }
+
+    .social a {
+      color: #00bfff;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+
+    .social a:hover {
+      color: #1e90ff;
+    }
+
+    .btn-volver {
+      margin-top: 40px;
+      background: linear-gradient(90deg, #00bfff, #1e90ff);
+      border: none;
+      border-radius: 30px;
+      padding: 12px 25px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .btn-volver:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00bfff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎮 Menú Principal</h1>
+
+  <div class="info">
+    <h2>📍 Acerca de nosotros</h2>
+    <p>Somos una comunidad apasionada por la tecnología, los videojuegos y el desarrollo digital. Aquí podrás explorar nuestros proyectos, participar en eventos y aprender más sobre programación.</p>
+
+    <h2>📞 Contáctanos</h2>
+    <p><strong>Teléfono:</strong> +57 320 555 7890</p>
+    <p><strong>Correo electrónico:</strong> contacto@miweb.com</p>
+    <p><strong>Dirección:</strong> Calle 45 # 12-34, Bogotá, Colombia</p>
+
+    <div class="social">
+      <h2>🌐 Síguenos</h2>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+
+  <button class="btn-volver" onclick="window.location.href='index.html'">🏠 Volver al inicio</button>
+  <a href="menu2.html" class="btn-volver"><i class="fa-solid fa-code"></i> Ir a Menú 2</a>
+
+</body>
+</html>

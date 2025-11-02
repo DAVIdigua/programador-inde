@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenido a programador inde</title>
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Fondo con degradado cálido */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #00fff7, #0023e9, #38b407, #bf771f);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Caja central */
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 50px 60px;
+      border-radius: 25px;
+      text-align: center;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    .container img {
+      width: 140px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 35px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Botones */
+    .btn {
+      display: block;
+      width: 220px;
+      margin: 12px auto;
+      padding: 12px 0;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: white;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-login {
+      background: linear-gradient(90deg, #007bff, #00cfff);
+      box-shadow: 0 0 20px rgba(0,123,255,0.4);
+    }
+
+    .btn-register {
+      background: linear-gradient(90deg, #7a00ff, #007bff);
+      box-shadow: 0 0 20px rgba(106,17,203,0.4);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(255,255,255,0.4);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img src="imagenes/logo.png" alt="Logo">
+    <h1>Bienvenido a programador inde</h1>
+    <button class="btn btn-login" onclick="location.href='login.html'">INICIAR SESIÓN</button>
+    <button class="btn btn-register" onclick="location.href='registro.html'">REGISTRARSE</button>
+  </div>
+</body>
+</html>

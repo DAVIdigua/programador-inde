@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programador Inde - Menú 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --color-primario: #58a6ff;      /* azul tech elegante */
+      --color-secundario: #a78bfa;    /* violeta suave */
+      --color-texto: #e2e8f0;         /* gris claro */
+      --color-subtexto: #cbd5e1;      /* gris más tenue */
+      --color-fondo1: #0d1117;        /* fondo oscuro principal */
+      --color-fondo2: #161b22;        /* fondo de tarjetas */
+      --color-borde: rgba(255, 255, 255, 0.05);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #111827, var(--color-fondo1));
+      color: var(--color-texto);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px 30px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: var(--color-subtexto);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 30px;
+      padding: 40px 60px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--color-fondo2);
+      border: 1px solid var(--color-borde);
+      border-radius: 20px;
+      padding: 30px 25px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 25px rgba(88, 166, 255, 0.2);
+    }
+
+    .card i {
+      font-size: 2.4rem;
+      color: var(--color-primario);
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      color: var(--color-secundario);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--color-subtexto);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .btn-volver {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+      color: white;
+      padding: 12px 35px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 150, 255, 0.2);
+    }
+
+    .btn-volver:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 150, 255, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      padding: 20px;
+      color: var(--color-subtexto);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>💻 Programador Inde proyectos</h1>
+    <p>Explora recursos, proyectos y herramientas creadas por desarrolladores independientes.
+      Cada sección tiene un propósito esencial para tu crecimiento como programador indie.
+    </p>
+  </header>
+
+  <section class="cards">
+    <div class="card">
+      <i class="fa-solid fa-laptop-code"></i>
+      <h2>Proyectos</h2>
+      <p>Descubre las aplicaciones, juegos y páginas creadas por Programador Inde.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-book-open"></i>
+      <h2>Cursos</h2>
+      <p>Aprende desarrollo web, JavaScript, Python y más con nuestros tutoriales.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-toolbox"></i>
+      <h2>Herramientas</h2>
+      <p>Accede a utilidades útiles para programadores: editores, snippets y recursos.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-comments"></i>
+      <h2>Comunidad</h2>
+      <p>Únete a otros desarrolladores indie, comparte ideas y colabora en proyectos.</p>
+    </div>
+  </section>
+
+  <div class="btn-container">
+    <a href="menu.html" class="btn-volver">
+      <i class="fa-solid fa-house"></i> Volver al menú principal
+    </a>
+  </div>
+
+  <footer>© 2025 Programador Inde | Creado por la comunidad indie</footer>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Programador Inde</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* === ESTILO BASE === */
+    :root {
+      --color1: #00c6ff;
+      --color2: #0072ff;
+      --color3: #00ff88;
+      --fondo1: #141E30;
+      --fondo2: #243B55;
+      --glass: rgba(255, 255, 255, 0.1);
+      --brillo: rgba(255, 255, 255, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, var(--fondo1), var(--fondo2));
+      overflow-x: hidden;
+      animation: fondoAnimado 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes fondoAnimado {
+      0% { background: linear-gradient(135deg, var(--fondo1), var(--fondo2)); }
+      100% { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+    }
+
+    /* === HEADER === */
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    header h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, var(--color1), var(--color3));
+  background-clip: text;            /* ✅ versión estándar */
+  -webkit-background-clip: text;    /* ✅ compatibilidad WebKit */
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+      }
+
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    header h2 {
+      font-size: 1.6rem;
+      color: #00ffcc;
+      text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+    }
+
+    /* === SECCIÓN DE JUEGOS === */
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeInUp 2s ease;
+    }
+
+    .game-card {
+      background: var(--glass);
+      border-radius: 20px;
+      overflow: hidden;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--brillo);
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+      transform: perspective(1000px) rotateX(0deg);
+    }
+
+    .game-card:hover {
+      transform: scale(1.05) rotateX(5deg);
+      box-shadow: 0 8px 30px rgba(0, 255, 255, 0.4);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 2px solid rgba(255,255,255,0.1);
+    }
+
+    .game-card h2 {
+      margin: 15px 0 10px;
+      font-size: 1.4rem;
+      color: #00eaff;
+      text-shadow: 0 0 5px rgba(0,255,255,0.4);
+    }
+
+    .game-card p {
+      padding: 0 15px 15px;
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    /* === BOTONES === */
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--color1), var(--color2));
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, var(--color2), var(--color1));
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(0, 150, 255, 0.7);
+    }
+
+    /* === BOTÓN DE MENÚ PRINCIPAL === */
+    .menu-link {
+      text-align: center;
+      margin: 40px 0;
+      animation: fadeIn 2s ease;
+    }
+
+    .btn-menu {
+      display: inline-block;
+      background: linear-gradient(90deg, #00b09b, #96c93d);
+      color: white;
+      padding: 14px 35px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      box-shadow: 0 0 25px rgba(0,255,128,0.4);
+      transition: all 0.3s ease;
+      animation: bounceIn 2s ease;
+    }
+
+    .btn-menu:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 0 35px rgba(0,255,128,0.6);
+    }
+
+    /* === FOOTER === */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      animation: fadeIn 2s ease;
+      color: #ccc;
+    }
+
+    /* === ANIMACIONES === */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      80% { transform: scale(0.9); }
+      100% { transform: scale(1); }
+    }
+
+    /* ✨ SCROLL ANIMATION */
+    .game-card {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease;
+    }
+
+    .game-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>BIENVENIDO</h1>
+    <p>Has iniciado sesión correctamente 🎮</p>
+    <h2>🚀 Próximos lanzamientos</h2>
+  </header>
+
+  <section class="games">
+    <div class="game-card">
+      <img src="imagenes/cyberrun.png" alt="CyberRun">
+      <h2>CyberRun</h2>
+      <p>Corre por los tejados de una ciudad futurista mientras hackeas drones enemigos.</p>
+      <a href="#" class="btn">Próximamente</a>
+    </div>
+
+    <div class="game-card">
+      <img src="imagenes/dragoncode.png" alt="DragonCode">
+      <h2>DragonCode</h2>
+      <p>Domina la magia del código antiguo y controla dragones digitales en combates épicos.</p>
+      <a href="#" class="btn">Ver detalles</a>
+    </div>
+
+    <div class="game-card">
+      <img src="imagenes/neoncraft.png" alt="NeonCraft">
+      <h2>NeonCraft</h2>
+      <p>Construye mundos luminosos en una dimensión cibernética sin límites.</p>
+      <a href="#" class="btn">Próximamente</a>
+    </div>
+  </section>
+
+  <div class="menu-link">
+    <a href="menu.html" class="btn-menu">Ir al menú principal 🍀</a>
+  </div>
+
+  <footer>© 2025 Programador Inde</footer>
+
+  <script>
+    // Animación al hacer scroll
+    const cards = document.querySelectorAll('.game-card');
+    const mostrarEnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      cards.forEach(card => {
+        const boxTop = card.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) card.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', mostrarEnScroll);
+    mostrarEnScroll();
+  </script>
+</body>
+</html>
